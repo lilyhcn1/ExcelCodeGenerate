@@ -5,5 +5,6 @@
 vba下载地址：https://plus.wps.cn/blog/p77353.html
 2. 将"老黄牛小工具"这一文件夹复制到 D:\
 3. 因为很多程序用了python，所以建议安装python.
+一定要勾选，"add python 3.9 to path"
 4. 进入"0.安装过程",双击安装依赖.
 5. 运行“2.多级菜单生成器.xlsm"这样可以生成自己想要的菜单。
