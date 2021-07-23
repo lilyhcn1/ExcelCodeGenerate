@@ -2,7 +2,7 @@
 
 右键菜单：
 
-http://vps0.upsir.com/img/V34XZ0D0Dd.mp4
+![菜单](https://bafybeiavoricq6p4i7dgo4y4tc6y2e27igzi2erkow46nqxncmr7bonlnu.ipfs.cf-ipfs.com/)
 
 暂时可以发QQ消息、微信消息、高校通消息、邮箱，自己用起来很舒服。
 

@@ -31,7 +31,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\系统程序]
 "MUIVerb"="系统程序"
 
-"SubCommands"="cmd;远程桌面;路径转环境变量"
+"SubCommands"="cmd;远程桌面;复制路径;小工具文件夹;清除菜单"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\系统程序\command]
 
@@ -53,13 +53,31 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\远程桌面\command]
 @="mstsc.exe "
 
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径]
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量]
-"MUIVerb"="路径转环境变量"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径]
+"MUIVerb"="复制路径"
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量\command]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径\command]
 @="cmd.exe  /C  python.exe \"D:\\老黄牛小工具\\小工具\\路径转环境变量.py\"  %1"
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹]
+"MUIVerb"="小工具文件夹"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹\command]
+@="explorer.exe D:\\老黄牛小工具\\ "
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单]
+"MUIVerb"="清除菜单"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单\command]
+@="explorer.exe D:\\老黄牛小工具\\0.安装过程\\其它备用程序 "
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API]
 
@@ -91,7 +109,7 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\多媒体]
 "MUIVerb"="多媒体"
 
-"SubCommands"="图片缩小至1920;webM转mp3"
+"SubCommands"="图片缩小至1920;视频压缩;webM转mp3;MP4转gif;MP4转gif(ahk)"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\多媒体\command]
 
@@ -104,11 +122,37 @@ Windows Registry Editor Version 5.00
 @="\"wscript.exe\" \"D:\\老黄牛小工具\\小工具\\缩小图片nconvert\\缩小至1920.vbs\" %1"
 
 
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩]
+"MUIVerb"="视频压缩"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩\command]
+@="D:\\老黄牛小工具\\小工具\\ffmpeg视频压缩.bat  %1"
+
+
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3]
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3]
 "MUIVerb"="webM转mp3"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3\command]
-@="D:\\sharex\\ShareX\\Tools\\ffmpeg.exe -i  \\"%1\\" -vn -ab 128k -ar 44100 -y  \\"%1.mp3\\"  "
+@="D:\\老黄牛小工具\\小工具\\webm转mp3.bat  %1"
+
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif]
+"MUIVerb"="MP4转gif"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif\command]
+@="D:\\老黄牛小工具\\小工具\\Mp4转gif.bat  %1"
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)]
+"MUIVerb"="MP4转gif(ahk)"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)\command]
+@="cmd.exe  /C D:\老黄牛小工具\小工具\AutoHotkey.exe \"D:\\老黄牛小工具\\小工具\\Mp4转gif.ahk\"  %1"
 
