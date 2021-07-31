@@ -19,140 +19,96 @@ Windows Registry Editor Version 5.00
 "MuiVerb"="------ 三思文秘工具箱 ------"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\notepad2]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\notepad2]
-"MUIVerb"="notepad2"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\notepad2\command]
 @="D:\\老黄牛小工具\\小工具\\notepad2\\Notepad2.exe %1"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\系统程序]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\系统程序]
 "MUIVerb"="系统程序"
-
-"SubCommands"="cmd;远程桌面;复制路径;小工具文件夹;清除菜单"
+"SubCommands"="cmd;远程桌面;小工具目录;路径转环境变量;结束指定程序;清除文秘工具箱菜单"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\系统程序\command]
 
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\cmd]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\cmd]
-"MUIVerb"="cmd"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\cmd\command]
 @="cmd.exe "
 
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\远程桌面]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\远程桌面]
-"MUIVerb"="远程桌面"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\远程桌面\command]
 @="mstsc.exe "
 
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径]
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径]
-"MUIVerb"="复制路径"
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具目录]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具目录]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具目录\command]
+@="explorer.exe D:\\老黄牛小工具\\小工具 "
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\复制路径\command]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\路径转环境变量\command]
 @="cmd.exe  /C  python.exe \"D:\\老黄牛小工具\\小工具\\路径转环境变量.py\"  %1"
 
 
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹]
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹]
-"MUIVerb"="小工具文件夹"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\小工具文件夹\command]
-@="explorer.exe D:\\老黄牛小工具\\ "
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\结束指定程序]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\结束指定程序]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\结束指定程序\command]
+@="D:\\老黄牛小工具\\小工具\\结束进程.bat "
 
 
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单]
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单]
-"MUIVerb"="清除菜单"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除菜单\command]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除文秘工具箱菜单]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除文秘工具箱菜单]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除文秘工具箱菜单\command]
 @="explorer.exe D:\\老黄牛小工具\\0.安装过程\\其它备用程序 "
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API]
 "MUIVerb"="网络API"
-
 "SubCommands"="临时文件transfer.sh;表格上传文件"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API\command]
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\临时文件transfer.sh]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\临时文件transfer.sh]
-"MUIVerb"="临时文件transfer.sh"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\临时文件transfer.sh\command]
 @="cmd.exe  /C  python.exe \"D:\\老黄牛小工具\\小工具\\文件上传transfer.sh.py\"  %1"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\表格上传文件]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\表格上传文件]
-"MUIVerb"="表格上传文件"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\表格上传文件\command]
 @="\"wscript.exe\" \"D:\\老黄牛小工具\\ExcelQuery\\表格网络上传文件.vbs\" %1"
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\多媒体]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\多媒体]
 "MUIVerb"="多媒体"
-
-"SubCommands"="图片缩小至1920;视频压缩;webM转mp3;MP4转gif;MP4转gif(ahk)"
+"SubCommands"="图片缩小至1920;视频压缩;webM转mp3;MP4转gif"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\多媒体\command]
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\图片缩小至1920]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\图片缩小至1920]
-"MUIVerb"="图片缩小至1920"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\图片缩小至1920\command]
 @="\"wscript.exe\" \"D:\\老黄牛小工具\\小工具\\缩小图片nconvert\\缩小至1920.vbs\" %1"
 
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩]
-"MUIVerb"="视频压缩"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\视频压缩\command]
-@="D:\\老黄牛小工具\\小工具\\ffmpeg视频压缩.bat  %1"
+@="D:\\老黄牛小工具\\小工具\\视频压缩.bat  %1"
 
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3]
-"MUIVerb"="webM转mp3"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\webM转mp3\command]
 @="D:\\老黄牛小工具\\小工具\\webm转mp3.bat  %1"
 
 
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif]
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif]
-"MUIVerb"="MP4转gif"
-
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif\command]
 @="D:\\老黄牛小工具\\小工具\\Mp4转gif.bat  %1"
-
-[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)]
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)]
-"MUIVerb"="MP4转gif(ahk)"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\MP4转gif(ahk)\command]
-@="cmd.exe  /C D:\老黄牛小工具\小工具\AutoHotkey.exe \"D:\\老黄牛小工具\\小工具\\Mp4转gif.ahk\"  %1"
 

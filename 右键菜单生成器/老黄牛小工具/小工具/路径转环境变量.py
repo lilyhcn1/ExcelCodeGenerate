@@ -17,7 +17,7 @@ def setCopy(str):
     wc.SetClipboardData(win32con.CF_UNICODETEXT, str)
     wc.CloseClipboard()
     
-inputstr=sys.argv[1]
+inputstr=' '.join(sys.argv[1:])
 #inputstr=r"E:\Seafile\私人资料库\分类工作\科研_学术讲座\人文学术讲座.xlsm"
 print(inputstr)
 inputstr=inputstr.replace(r"E:\Seafile\私人资料库",'%lilyfolder%')
