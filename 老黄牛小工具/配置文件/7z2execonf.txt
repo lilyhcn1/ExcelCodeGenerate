@@ -1,0 +1,3 @@
+;!@Install@!UTF-8!
+Title="老黄牛压缩软件"
+;!@InstallEnd@!

@@ -1,5 +1,17 @@
 @echo off
 set inputpath="%~1"
+set ffmpegpath=%~dp0/ffmpeg.exe
+set ffmpegurl=http://vps0.upsir.com/lilypub/ffmpeg.exe
+set curlpath=D:/老黄牛小工具/ExcelQuery/curl.exe
+ 
+if not exist %ffmpegpath% (
+    echo  ----------------------------------------------
+    echo %GenFile% 文件不存在，正准备下载，文件很大，请耐心等待！
+    echo  ----------------------------------------------
+    choice /t 1 /d y /n >nul
+    %curlpath% -o %ffmpegpath% %ffmpegurl%
+    )
+    
 SETLOCAL EnableDelayedExpansion
 set w=1920
 set fps=25
