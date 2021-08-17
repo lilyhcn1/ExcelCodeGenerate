@@ -43,7 +43,7 @@ def firstval(arr):
 def savesttxt(str,path=TEMPTEXT):
     with open(path, 'w') as file_object:
         file_object.write(str)
-def sysargv(inputstr=""):
+def lilysysargv(inputstr=""):
     if len(sys.argv)>1:    #判断有没有参数
         n = len(sys.argv)
         temp=""
@@ -82,12 +82,13 @@ import pyperclip
 
 
 
-inputstr=sysargv(r"D:\老黄牛小工具\小工具\222.pdf")
+inputstr=lilysysargv(r"D:\老黄牛小工具\小工具\222.pdf")  #这是自定义的取参数
 print(inputstr)
 
 if __name__ == "__main__":
     imageurl="test"
     #time.sleep(1)
+    time.sleep(3)
     imageurl=upload(inputstr)
     pyperclip.copy(imageurl)
     print(imageurl)

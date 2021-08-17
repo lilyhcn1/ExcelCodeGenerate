@@ -53,7 +53,7 @@ def sysargv(inputstr=""):
             else:
                 temp = temp + sys.argv[i] +" "
         inputstr=temp
-        print("input: "+ inputstr)
+        #print("input: "+ inputstr)
     return inputstr
 
 
@@ -79,12 +79,15 @@ def upload(path):
 import pyperclip
 #pyperclip.copy()
 
-inputstr=sysargv(r"E:\Seafile\私人资料库\个人研究\学生竞赛等\文秘标准研究及实践\多级右键菜单\测试用材料\艺术楼1-1.JPG")
+inputstr=sysargv(r"C:\Users\lilyhcn\Desktop\1e736e07c3ba4c3944b44fc4e06cc9c.jpg")
 print(inputstr)
-
+print("正在上传，等稍候！~")
 if __name__ == "__main__":
     #time.sleep(9)
     imageurl=upload(inputstr)
+    savesttxt(imageurl,TEMPTEXT)
     pyperclip.copy(imageurl)
     print(imageurl)
-    time.sleep(3)
+    #time.sleep(3)
+    os.popen(TEMPTEXT)
+    time.sleep(9)
