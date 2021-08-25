@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 from urllib import request
 import urllib.parse
 import os,os.path,json,sys
@@ -10,6 +11,9 @@ GENPATH="生成文件夹"
 JSONFILE=r'd:/老黄牛小工具/ExcelQuery/temp/temp.json'
 JSONFILE2=r'd:/老黄牛小工具/ExcelQuery/temp/temp2.json'
 TEMPTEXT=r'd:/老黄牛小工具/ExcelQuery/temp/temp.txt'
+TEMPJPG=r'D:/老黄牛小工具/ExcelQuery/temp/temp.jpg'
+SCREENEREXE=r'd:/老黄牛小工具/小工具/360screener.exe'
+NCONVERTEXE=r'D:/老黄牛小工具/小工具/缩小图片nconvert/nconvert.exe'
 
 
 #这里替换成常用函数
@@ -43,7 +47,8 @@ def firstval(arr):
 def savesttxt(str,path=TEMPTEXT):
     with open(path, 'w') as file_object:
         file_object.write(str)
-def sysargv(inputstr=""):
+        
+def r34sysargv(inputstr=""):
     if len(sys.argv)>1:    #判断有没有参数
         n = len(sys.argv)
         temp=""
@@ -57,37 +62,12 @@ def sysargv(inputstr=""):
     return inputstr
 
 
+def screen2jpg():
+    os.system(SCREENEREXE)
+    exeurl = NCONVERTEXE + " -out jpeg -clipboard -overwrite -o " + TEMPJPG
+    print(exeurl)
 
-def upload(path):
-    headers = {'Authorization': 'W2v89ImTEPqkCVr03dpRfW3wvjwbHyjj'}
-    files = {'smfile': open(path, 'rb')}
-    url = 'https://sm.ms/api/v2/upload'
-    res = requests.post(url, files=files, headers=headers).json()
-    aa=json.dumps(res, indent=4)
-    aa=json.loads(aa)
-    successstr = aa['success']
-    #print(successstr)
-    if  successstr == False:
-        imageurl=aa['images']
-    elif successstr == True:
-        imageurl=aa['data']['url']
-    else:
-        print('error')
-    return imageurl
+#-----------------------------------------------------
 
 
-import pyperclip
-#pyperclip.copy()
 
-inputstr=sysargv(r"C:\Users\lilyhcn\Desktop\1e736e07c3ba4c3944b44fc4e06cc9c.jpg")
-print(inputstr)
-print("正在上传，等稍候！~")
-if __name__ == "__main__":
-    #time.sleep(9)
-    imageurl=upload(inputstr)
-    savesttxt(imageurl,TEMPTEXT)
-    pyperclip.copy(imageurl)
-    print(imageurl)
-    #time.sleep(3)
-    os.popen(TEMPTEXT)
-    #time.sleep(9)
