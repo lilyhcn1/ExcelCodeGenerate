@@ -1,10 +1,14 @@
 #Include %A_LineFile%\..\JSON.ahk
-
+;错误检查 1 接口有没申请 ，2 第一个值返回对不对
 ; 函数：找到数组的第一个值
 returnfirstvalue(ByRef arr){
   For index, value in arr{
       ;MsgBox % "Item " index " is '" arr[index] "'"
-      fv := arr[index]
+      if(arr["ask"] <> ""){
+        fv := arr["ask"]
+      }else{
+        fv := arr[index]
+      }
       break
   }
   return fv
@@ -37,7 +41,7 @@ fv := returnfirstvalue(parsed["contents"])
 ;msgbox % fv
 
 ;读取api的结果
-url := "http://api.tianapi.com/txapi/addressparse/index?key=6fc9b18a18857af8ae0619e0ec3de9ee&text="fv
+url := "http://api.tianapi.com/txapi/pinyin/index?key=6fc9b18a18857af8ae0619e0ec3de9ee&text="fv
 ;msgbox % url
 res := geturlcontent(url)
 r := JSON.Load(res)

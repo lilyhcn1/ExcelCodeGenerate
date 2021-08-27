@@ -7,17 +7,17 @@ Windows Registry Editor Version 5.00
 [-HKEY_CLASSES_ROOT\Directory\shell\------ 三思文秘工具箱 ------]
 
 [HKEY_CLASSES_ROOT\*\shell\------ 三思文秘工具箱 ------]
-"SubCommands"="notepad2;系统程序;网络API;多媒体"
+"SubCommands"="notepad2;系统程序;文件分享;网络API;多媒体"
 "MuiVerb"="------ 三思文秘工具箱 ------"
 "Icon"="D:\\老黄牛小工具\\小工具\\icon\\r34.ico"
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\------ 三思文秘工具箱 ------]
-"SubCommands"="notepad2;系统程序;网络API;多媒体"
+"SubCommands"="notepad2;系统程序;文件分享;网络API;多媒体"
 "MuiVerb"="------ 三思文秘工具箱 ------"
 "Icon"="D:\\老黄牛小工具\\小工具\\icon\\r34.ico"
 
 [HKEY_CLASSES_ROOT\Directory\shell\------ 三思文秘工具箱 ------]
-"SubCommands"="notepad2;系统程序;网络API;多媒体"
+"SubCommands"="notepad2;系统程序;文件分享;网络API;多媒体"
 "MuiVerb"="------ 三思文秘工具箱 ------"
 "Icon"="D:\\老黄牛小工具\\小工具\\icon\\r34.ico"
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\notepad2]
@@ -85,6 +85,36 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\清除文秘工具箱菜单\command]
 @="explorer.exe D:\\老黄牛小工具\\小工具\\系统\\ "
 
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\文件分享]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\文件分享]
+"MUIVerb"="文件分享"
+"SubCommands"="微信文件助手;QQ群文件;局域网共享目录"
+"Icon"="D:\\老黄牛小工具\\小工具\\icon\\floder.ico"
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\文件分享\command]
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\微信文件助手]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\微信文件助手]
+"MUIVerb"="微信文件助手"
+"Icon"="D:\\老黄牛小工具\\小工具\\icon\\e.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\微信文件助手\command]
+@="D:\\老黄牛小工具\\小工具\\AutoHotkey.exe D:\\老黄牛小工具\\小工具\\ahk\\分享文件至微信文件助手.ahk  %1"
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\QQ群文件]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\QQ群文件]
+"MUIVerb"="QQ群文件"
+"Icon"="D:\\老黄牛小工具\\小工具\\icon\\e.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\QQ群文件\command]
+@="D:\\老黄牛小工具\\小工具\\AutoHotkey.exe D:\\老黄牛小工具\\小工具\\ahk\\分享文件到QQ群.ahk  %1"
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\局域网共享目录]
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\局域网共享目录]
+"MUIVerb"="局域网共享目录"
+"Icon"="D:\\老黄牛小工具\\小工具\\icon\\e.ico"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\局域网共享目录\command]
+@="D:\\老黄牛小工具\\小工具\\AutoHotkey.exe D:\\老黄牛小工具\\小工具\\ahk\\分享文件到局域网共享目录.ahk  %1"
 [-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API]
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\网络API]
 "MUIVerb"="网络API"
