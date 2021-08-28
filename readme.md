@@ -2,6 +2,8 @@
 
 **使用前请将“老黄牛小工具”复制到D盘**
 
+最新更新网址：https://github.com/lilyhcn1/excelcodegenerate
+
 ### 右键菜单：
 
 纯源代码公开，
