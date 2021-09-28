@@ -1,1 +1,0 @@
-Call ShellExecute(0, "open", Exe文件, 参数, 初始目录, SW_SHOWNORMAL)
