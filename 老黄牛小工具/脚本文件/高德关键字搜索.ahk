@@ -1,4 +1,4 @@
-#Include %A_LineFile%\..\JSON.ahk
+#Include %A_ScriptDir%\JSON.ahk
 
 ;错误检查 1 接口有没申请 ，2 第一个值返回对不对
 ; 函数：找到数组的第一个值

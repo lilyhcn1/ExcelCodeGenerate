@@ -1,4 +1,4 @@
-#Include %A_LineFile%\..\JSON.ahk
+#Include %A_ScriptDir%\JSON.ahk
 ;错误检查 1 接口有没申请 ，2 第一个值返回对不对
 ; 函数：找到数组的第一个值
 returnfirstvalue(ByRef arr){
@@ -52,7 +52,7 @@ r := JSON.Load(res)
 arr2 := []
 newr := returnfirstvalue(r["newslist"])
 arr2["script"] := "ahk"
-arr2["w"] := "key"
+arr2["w"] := "all"   ;key按键值写入，all全部写入
 arr2["content"] := newr
 
 

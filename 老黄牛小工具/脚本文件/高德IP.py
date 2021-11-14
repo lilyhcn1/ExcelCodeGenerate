@@ -57,7 +57,7 @@ response = request.urlopen(url)
 page = response.read().decode('utf-8')
 print(page)
 arr=json.loads(page)
-
+#print(arr)
 
 #-----------------------最终写入数据---------------------
 savearr2json(arr)

@@ -1,13 +1,42 @@
-#Include %A_LineFile%\..\JSON.ahk
-
+#Include %A_ScriptDir%\JSON.ahk
+#Include %A_ScriptDir%\Jxon.ahk
+;错误检查 1 接口有没申请 ，2 第一个值返回对不对
 ; 函数：找到数组的第一个值
 returnfirstvalue(ByRef arr){
   For index, value in arr{
       ;MsgBox % "Item " index " is '" arr[index] "'"
-      fv := arr[index]
+      if(arr["ask"] <> ""){
+        fv := arr["ask"]
+      }else{
+        fv := arr[index]
+      }
       break
   }
   return fv
+}
+
+JsonToAHK(json, rec := false) {
+   static doc := ComObjCreate("htmlfile")
+         , __ := doc.write("<meta http-equiv=""X-UA-Compatible"" content=""IE=9"">")
+         , JS := doc.parentWindow
+   if !rec
+      obj := %A_ThisFunc%(JS.eval("(" . json . ")"), true)
+   else if !IsObject(json)
+      obj := json
+   else if JS.Object.prototype.toString.call(json) == "[object Array]" {
+      obj := []
+      Loop % json.length
+         obj.Push( %A_ThisFunc%(json[A_Index - 1], true) )
+   }
+   else {
+      obj := {}
+      keys := JS.Object.keys(json)
+      Loop % keys.length {
+         k := keys[A_Index - 1]
+         obj[k] := %A_ThisFunc%(json[k], true)
+      }
+   }
+   Return obj
 }
 
 
@@ -50,14 +79,14 @@ newr := returnfirstvalue(r["newslist"])
 arr2["script"] := "ahk"
 arr2["w"] := "all"
 arr2["content"] := newr
-
+;arr2["contentall"] := res
 
 ;将构造好的数组写入文本
 stringified := JSON.Dump(arr2,, 4)
 ;msgbox % arr2["w"]
 FileDelete, d:\老黄牛小工具\ExcelQuery\temp\temp.json
 FileAppend,%stringified%,d:\老黄牛小工具\ExcelQuery\temp\temp.json
-
+;run,d:\老黄牛小工具\ExcelQuery\temp\temp2.json
 
 
 
