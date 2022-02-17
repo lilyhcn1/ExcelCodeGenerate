@@ -1,0 +1,1 @@
+Wscript.exe /X "拆分.vbs"
