@@ -2,7 +2,7 @@
 
 **使用前请将“老黄牛小工具”复制到D盘**
 
-工具网址为：https://r34.cc
+工具网址为：https://lilyhcn1.github.io/excelcodegenerate/
 
 网站思路为下图：
 
