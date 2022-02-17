@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=1280, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="robots" content="none" />
+		<meta name="googlebot" content="noindex, nofollow" />
+		<meta name="baiduspider" content="noarchive" />
+		<meta name="renderer" content="webkit" />
+		<title>三思工具导航</title>
+		<link rel="shortcut icon" href="https://r34.cc/favicon.ico">
+		<meta http-equiv="x-dns-prefetch-control" content="on" />
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/css/bootstrap-theme.min.css">
+ <link href="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/css/master.css" type="text/css" rel="stylesheet" />
+ <script src="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/js/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/css/jquery-ui.css" />
+ <script src="https://cdn.jsdelivr.net/gh/lilyhcn1/files/navstatic/js/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="b.css" />
+		<style type="text/css" title="style_type_change">
+			.c_setting {
+				width: 16px;
+				height: 16px;
+				background-image: url(//files.xiaolvji.com/img/comm.png);
+				background-position: -64px -80px
+			}
+
+			.fbox {
+				background-color: rgb(255, 255, 255);
+				padding-bottom: 60px;
+			}
+
+			.myweb:hover {
+				background-color: #f3faff
+			}
+
+			.welcome {
+				height: 30px;
+				line-height: 30px;
+				cursor: default;
+			}
+
+			.user_setting_link,
+			.login_link_a {
+				height: 30px;
+				line-height: 30px;
+				margin-left: 5px;
+				color: #666;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		</style>
+
+		<style type="text/css">
+			.bdsug_copy {
+				display: none;
+			}
+		</style>
+
+
+	</head>
+	<body background="files/background.jpg">
+		<div id="content_area">
+		
+			<div class="fbox fbox_shadow" style="background-color: rgba(245, 251, 254, 0.9);" >
+				<!--最新提示-->
+				<div id="xlj_news" style="display:none;"></div>
+				<!--时间日期-->
+				<div id="clock"> <span id="datenow">2015.6.2 星期二</span>
+					<span id="hour">00:00</span>
+					<span id="sec">00</span>
+				</div>
+		
+				<!--搜索-->
+				<div id="search">
+					<div class="search_area">
+						<div class="inputbox">
+							<input type="text" id="invalue" class="invalue" value="" autocomplete="off" />
+							<div id="home_search_input_clear" class="input_search_clear_fixed" style="display: none;" title="清空输入"></div>
+						</div>
+						<div id="search_diy_power" val="2" class="sbtn_diy" style="font-weight: bold;">三思</div>						
+					</div>
+					<!-- <div class='zhelitext' id='zhelitext_area' style="visibility: hidden;">从不奢求生活能给予我最好的，只是执着于寻求最适合我的！</div> -->
+				</div>
+				<!--常用网址-->
+				<div id="webpop" style="display: none;"></div>
+				<!--自定义网址-->
+				<div class="user_webs" >
+					<div id="user_fav_area">
+
+
+					</div><!-- 用户收藏夹的代码 -->
+				</div> <!-- 核心区代码 -->
+				
+	
+			</div>
+
+
+			
+			<div class="footer">
+			  <div class="content">
+				<p>平台还未完成，但以下的小工具都可以用，欢迎大家给我提意见。QQ群：539844557.</p>
+			       <p>  2020 <a href="//r34.cc/">爱三思文秘工作站(r34.cc)</a> <a href="https://beian.miit.gov.cn">浙ICP备15043841号-2</a></p>
+			      <p><script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280835591'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1280835591%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></p>
+			  
+			  </div>
+			 </div>  <!-- 结尾 -->
+		</div>
+
+<script>
+$.ajaxSettings.async = false;
+var url="//r34.cc/index.php/Qwadmin/Rwxy/echojson/type/json/conall/%3B%E6%95%B0%E6%8D%AE%E8%A1%A8%E5%90%8D%E7%AD%89%E4%BA%8Er34index%3B%E6%9F%A5%E7%9C%8B%E5%AF%86%E7%A0%81%E7%AD%89%E4%BA%8E8K3130517E"
+$.getJSON(url, function(jsonarr) {
+cellnum=30  //一个栏目中的框的个数
+var FunClass="类型"   //分类的名字
+var FunName="功能名"  //分类中功能的名字
+cl=ttt=newval=""
+first=j=0
+
+
+
+
+
+
+
+
+mydata=jsonarr.arr
+const t = new Array(10).fill('')
+
+const tt = new Array(mydata.length).fill('')
+t[5]='';
+t[7]='	</div>\
+							</div>\
+						</div>'	 
+
+$.each(mydata, function(i, valarr){   //只计算前面部分，后面后补
+    if(valarr[FunClass]!=FunClass){       //去除第一个自己
+    	if (cl!=valarr[FunClass]){     //不相等就多一个数组
+    		first=first+1
+    		url="//r34.cc/index.php/Qwadmin/Vi/uniquerydata/rpw/8K3130517E/sheetname/r34index/d1/"+valarr[FunClass]
+    		if(valarr['url'] != null ){ url=valarr['url']}
+            
+    		
+    		tt[first]='<div class="myweb">\
+    		                <a class="myweb_title" href="'+ url+ '" title="'+valarr[FunClass]+'">' +valarr[FunClass]+'</a>\
+						    <div class="myweb_content">'
+    		
+    		
+    		j=0       //计算有几个li
+    	}  //不相等if
+    	newval=(valarr[FunName] == null )?"":valarr[FunName]
+		url='//r34.cc/index.php/Qwadmin/Vi/uniquerydata/rpw/8K3130517E/sheetname/r34index/name/'+newval
+    	t[6]='<div class="myweb_site_align"> \
+				<red><a href="'+ url+'" target="_blank" class="myweb_site_name_align" title="'+ valarr[FunName] +'">'+valarr[FunName]+'</red></a>\
+			</div>'
+
+    	j=j+1
+    	if(j <= cellnum){
+    	    tt[first]=tt[first]+t[6]	    
+    	}
+    	cl=valarr[FunClass]
+    	// console.log("--------"+first+"---------"+tt[first])	
+    }
+})
+
+$.each(tt, function(ii, vv){      //后面部分补上     
+	if(vv!=""){
+		ttt=ttt+vv+t[7]	}
+})
+	
+
+
+}); 
+
+// console.log(ttt)
+$("#user_fav_area").append(ttt);	
+</script>
+
+
+		<script type="text/javascript" src="js/comm.js?v=20220118121212121212121212121212"></script>
+
+		<script type="text/javascript">
+
+			function showtime() {
+				var strDate;
+				var today = new Date();
+				var strDate = decide_week_day(today);
+				var year = today.getFullYear();
+				var month = today.getMonth() + 1;
+				var date = today.getDate();
+				var hour = today.getHours();
+				if (hour < 10) {
+					hour = '0' + hour.toString();
+				}
+
+				var minute = today.getMinutes();
+				if (minute < 10) {
+					minute = '0' + minute.toString();
+				}
+
+				var second = today.getSeconds();
+
+				//扫描 待办事
+				if (second == 0 && (typeof mynote_data_task) !== 'undefined' && mynote_data_task.length > 0) {
+					//当前时间
+					var time_now = Math.ceil((today.getTime()) / 1000);
+					for (var i = 0, x = mynote_data_task.length; i < x; i++) {
+						if (mynote_data_task[i]['1'] == 0 && parseInt(mynote_data_task[i]['5']) > 0 && time_now >= parseInt(
+								mynote_data_task[i]['5'])) {
+							//扫描 待办事 ,如果到期,修改 提醒颜色
+							var obj_alert_show = $('mynote_todo_part_alert_time_' + mynote_data_task[i]['0'])
+							if (time_now >= parseInt(mynote_data_task[i]['5'])) {
+								obj_alert_show.style.color = 'red';
+								obj_alert_show.getElementsByTagName('div')['0'].className = 'img_part_operation_alert_out_date';
+							} else {
+								obj_alert_show.style.color = 'gray';
+								obj_alert_show.getElementsByTagName('div')['0'].className = 'img_part_operation_alert';
+							}
+
+							//执行 待办事 提醒
+							if (mynote_data_task[i]['6'] == 0) {
+								var alert_message = mynote_data_task[i]['2'] + '\n提醒时间:' + formatDateTimeFull(mynote_data_task[i]['5']) + '\n';
+								xlj_notify('效率集 [待办事] 提醒', alert_message, '//files.xiaolvji.com/img/alert_message.png');
+								//标记已经显示过的to-do
+								mynote_todo_show_flag(mynote_data_task[i]['0']);
+							}
+						}
+					}
+					//修改title 待办事提醒
+					mynote_todo_change_title_alert();
+
+
+				}
+
+				if (second < 10) {
+					second = '0' + second.toString();
+				}
+
+				$('datenow').innerHTML = year + '.' + month + '.' + date + ' ' + strDate;
+				$('hour').innerHTML = hour + ':' + minute;
+				if ((typeof time_type) !== 'undefined' && time_type === 'no') {
+					$('sec').innerHTML = '　';
+				} else {
+					$('sec').innerHTML = second;
+				}
+			}
+
+			//设定函数自动执行时间为 1000 ms(1 s)
+			var time_run = window.setInterval(function() {
+				showtime();
+			}, 1000);
+		</script>
+
+
+
+	</body>
+</html>
