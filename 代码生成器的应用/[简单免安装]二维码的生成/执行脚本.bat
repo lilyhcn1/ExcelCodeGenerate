@@ -1,13 +1,13 @@
  
  
-rem 老黄牛
+rem 老黄牛小工具
 set nowpath=%~dp0
 set notepad2path=%nowpath%辅助文件夹\notepad2\notepad2.exe
 set zint=%nowpath%辅助文件夹\zint二维码生成\zint.exe
 set genpath=%nowpath%生成文件夹
 cd %genpath%
-echo 老黄牛 >temp.txt
-%zint% -o %genpath%\老黄牛.png  -b 58 --scale 10 --binary -i temp.txt 
+echo 老黄牛小工具 >temp.txt
+%zint% -o %genpath%\老黄牛小工具.png  -b 58 --scale 10 --binary -i temp.txt 
 rem fdfdsfdsf
 set nowpath=%~dp0
 set notepad2path=%nowpath%辅助文件夹\notepad2\notepad2.exe
